@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   detectPhishingButton.addEventListener('click', function() {
     chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
       chrome.tabs.sendMessage(tabs[0].id, { type: 'detect-phishing' }, function(response) {
-        resultDiv.innerHTML = response.result;
+    	resultDiv.innerHTML = response.result;
       });
     });
   });

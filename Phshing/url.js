@@ -1,15 +1,16 @@
-// Usage in main code
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    if (request.type === 'detect-phishing') {
-        // Parse the current URL
-        var urlParts = new URL(window.location.href);
-
-        // Use the function to set phishingDetected
-        var phishingDetected = checkForPhishing(urlParts);
-
-        // Send the response based on the phishing detection result
-        sendResponse({ result: phishingDetected ? 'Phishing Detected!' : 'No Phishing Detected' });
-    }
+document.addEventListener('DOMContentLoaded', function() {
+    var checkUrlButton = document.getElementById('checkUrl');
+    checkUrlButton.addEventListener('click', function() {
+        var urlInput = document.getElementById('urlInput').value;
+        if (urlInput) {
+            // Assuming you have a function to check the URL for phishing
+            checkForPhishing(urlInput, function(phishingDetected) {
+                var resultDiv = document.getElementById('result');
+                resultDiv.textContent = phishingDetected ? 'Phishing Detected!' : 'No Phishing Detected';
+            });
+        }
+    }, false);
+}, false);
 
 function checkForPhishing(urlParts) {
     // Check if the hostname part of the URL consists only of numbers and dots
@@ -20,6 +21,7 @@ function checkForPhishing(urlParts) {
 
     // Checks for typosquatting or similar-looking domain names
     var googleLikeDetected = /.*g[^\/]*o[^\/]*o[^\/]*g[^\/]*l[^\/]*e.*/.test(urlParts.hostname);
+    var facebookLikeDetected = /.*f[^\/]*a[^\/]*c[^\/]*e[^\/]*b[^\/]*o[^\/]*o[^\/]*k.*/.test(urlParts.hostname);
     var instagramLikeDetected = /.*i[^\/]*n[^\/]*s[^\/]*t[^\/]*a[^\/]*g[^\/]*r[^\/]*a[^\/]*m.*/.test(urlParts.hostname);
     var tiktokLikeDetected = /.*t[^\/]*i[^\/]*k[^\/]*t[^\/]*o[^\/]*k.*/.test(urlParts.hostname);
     var paypalLikeDetected = /.*p[^\/]*a[^\/]*y[^\/]*p[^\/]*a[^\/]*l.*/.test(urlParts.hostname);
@@ -50,4 +52,3 @@ function checkForPhishing(urlParts) {
            excessiveHyphensDetected || mixedScriptDetected || !urlParts.href.startsWith('https://');
 }
 
-});
