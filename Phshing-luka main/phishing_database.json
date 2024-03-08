@@ -1,5 +1,5 @@
 {
-  "phishingKeywords": ["phish", "face", "login", "secure", "verify", "account", "update", "admin", "support"],
+  "phishingKeywords": ["phish", "trycloudflare", "login", "secure", "verify", "account", "update", "admin", "support"],
   "phishingUrls": ["example.com/phishing"],
   "phishingPatterns": [
     {
