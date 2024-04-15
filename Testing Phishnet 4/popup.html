@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for character set and viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title of the pop-up window -->
+  <title>PhishNet</title>
+  <!-- Link to Google Fonts for Raleway font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
+  <!-- Internal stylesheet for custom styles -->
+  <style>
+    /* Styles for the body of the pop-up */
+    body {
+      width: 400px;
+      font-family: 'Raleway', sans-serif;
+      margin: 20px;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      color: #ffffff; /* White text color */
+      background-image: url('images/background.jpg'); /* Background image for the pop-up */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    /* Styles for headings and paragraphs */
+    h1, h2, p {
+      color: #ffffff; /* White text color */
+    }
+
+    /* Styles for buttons */
+    button {
+      background-color: #00796b; /* Dark teal button color */
+      color: #ffffff; /* White text color */
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      font-weight: 700;
+      transition: background-color 0.3s ease; /* Smooth button hover transition */
+    }
+
+    /* Hover effect for buttons */
+    button:hover {
+      background-color: #004d40; /* Darker teal on hover */
+    }
+
+    /* Styles for the result section */
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #ff5252; /* Red text color for result */
+    }
+
+    /* Styles for the logo container */
+    .logo-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    /* Styles for the logos */
+    .logo {
+      width: 100px; /* Adjust the logo size as needed */
+      height: 100px;
+    }
+  </style>
+  <!-- Script tag to include JavaScript file for handling interactions -->
+  <script src="popup.js"></script>
+</head>
+<body>
+  <!-- Container for logos -->
+  <div class="logo-container">
+    <img class="logo" src="images/logo1.png" alt="PhishNet Logo"> <!-- Replace with your first logo -->
+    <img class="logo" src="images/logo1.png" alt="Second Logo"> <!-- Replace with your second logo -->
+    <img class="logo" src="images/logo1.png" alt="Third Logo"> <!-- Replace with your third logo -->
+  </div>
+  <button id="showHistory">View History</button>
+  <!-- Heading and paragraphs for introductory text -->
+  <h1>Welcome to PhishNet</h1>
+  <p>Stay safe online by detecting phishing websites. Click the button below to scan the current page for potential threats.</p>
+  <h2>PhishNet Detector</h2>
+  <!-- Button for triggering phishing detection -->
+  <button id="detectPhishing">Detect Phishing</button>
+  <!-- Placeholder for displaying detection result -->
+  <div id="result"></div>
+</body>
+</html>
