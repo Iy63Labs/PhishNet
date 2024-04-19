@@ -1,0 +1,34 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#historyList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.history-item {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.history-item p {
+  margin: 0;
+}
+
+.history-item .timestamp {
+  font-style: italic;
+  color: #777;
+}
