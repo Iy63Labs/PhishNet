@@ -6,13 +6,13 @@
   "permissions": ["tabs", "webRequest", "webNavigation"],
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "images/icon.png",  // Replace with the path to your single icon file
+    "default_icon": "images/icon.png",
     "default_title": "PhishNet"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js", "url.js"]
+      "js": ["content.js"]
     }
   ],
   "web_accessible_resources": [

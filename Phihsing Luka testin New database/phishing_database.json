@@ -1,0 +1,159 @@
+{
+  "phishingKeywords": ["phish", "trycloudflare", "login", "secure", "verify", "account", "update", "admin", "support", "bank", "paypal", "irs", "amazon", "google", "microsoft", "apple", "facebook", "instagram", "twitter", "linkedin", "yahoo", "netflix", "ebay", "chase", "wellsfargo", "citibank", "americanexpress", "att", "verizon", "paypal", "dhl", "fedex", "ups", "usps", "icloud", "dropbox", "onedrive", "snapchat", "spotify", "pinterest", "reddit", "twitch", "discord", "steam", "wordpress", "github", "bitbucket", "docker", "slack", "zoom", "moodle", "webex", "jira", "trello"],
+  "phishingUrls": [
+    "example.com/phishing",
+    "http://news.fangsforum.com/view/613d383671436065c8febf8cebc99ef2/public/index.php/",
+    "http://login.facebook.confirmation.verify.account.suspiciousexample.com/",
+    "http://secure.appleid.verify.phishing-url.com/",
+    "http://signin.microsoft.com-verifyaccount.login.verification.accountupdate.systemsupport.com/",
+    "http://irs-tax-filing.verify-account-login.com/",
+    "http://amazon.deals.verify-account-login.com/",
+    "http://login.yahoo.confirmation.suspicious-activity.com/",
+    "http://netflix-login.verification-accountupdate.com/",
+    "http://ebay-login.suspicious-signin-activity.com/",
+    "http://chaseonline-login.phishing-site.com/",
+    "http://wellsfargo-login-verify.attempted-fraud.com/",
+    "http://citibank-login.confirmation-suspiciousactivity.com/",
+    "http://americanexpress-login.account-verify.com/",
+    "http://att-login.verifying-account-security.com/",
+    "http://paypal-login.suspicious-activity.com/",
+    "http://dhl-shipping.confirmation-verify.com/",
+    "http://fedex-tracking-phishing.attemptedfraud.com/",
+    "http://ups-delivery.verify-package.com/",
+    "http://usps-shipping.confirmation-verify.com/",
+    "http://icloud-login.suspicious-signin-attempt.com/",
+    "http://dropbox-login-confirm.verification-url.com/",
+    "http://onedrive-login-account.verify-login.com/",
+    "http://snapchat-login.confirmation-verify.com/",
+    "http://spotify-login.attempted-fraud.com/",
+    "http://pinterest-login.suspicious-activity.com/",
+    "http://reddit-login.confirmation-verify.com/",
+    "http://twitch-login-phishing.attemptedfraud.com/",
+    "http://discord-login.verify-account-activity.com/",
+    "http://steam-login-confirm.suspicious-activity.com/",
+    "http://wordpress-login.attempted-fraud.com/",
+    "http://github-login.verify-account-activity.com/",
+    "http://bitbucket-login.confirmation-verify.com/",
+    "http://docker-login.attempted-fraud.com/",
+    "http://slack-login.confirmation-verify.com/",
+    "http://zoom-login-phishing.attemptedfraud.com/",
+    "http://moodle-login.attempted-fraud.com/",
+    "http://webex-login.confirmation-verify.com/",
+    "http://jira-login.attempted-fraud.com/",
+    "http://trello-login.confirmation-verify.com/"
+  ],
+  "phishingPatterns": [
+    {
+      "name": "Fake Login Page",
+      "pattern": "/login.php",
+      "description": "Common path for phishing login pages"
+    },
+    {
+      "name": "Account Verification",
+      "pattern": "/verify",
+      "description": "Common path for phishing account verification pages"
+    },
+    {
+      "name": "Suspicious Subdomain",
+      "pattern": "//suspicious.example.com/",
+      "description": "Subdomain commonly used for phishing"
+    },
+    {
+      "name": "Misleading Path",
+      "pattern": "/update/account",
+      "description": "Misleading path for phishing updates"
+    },
+    {
+      "name": "Fake Support Page",
+      "pattern": "/support/",
+      "description": "Common path for fake support pages"
+    },
+    {
+      "name": "Phishing Parameter",
+      "pattern": "phishing=1",
+      "description": "Parameter indicating phishing in the URL"
+    },
+    {
+      "name": "Malicious JavaScript",
+      "pattern": "malicious.js",
+      "description": "Malicious JavaScript file often used in phishing"
+    },
+    {
+      "name": "Fake Bank Login",
+      "pattern": "/banklogin.php",
+      "description": "Fake bank login page"
+    },
+    {
+      "name": "Fake PayPal Page",
+      "pattern": "/paypal/login",
+      "description": "Fake PayPal login page"
+    },
+    {
+      "name": "IRS Phishing",
+      "pattern": "/irs/login",
+      "description": "Phishing page mimicking IRS login"
+    },
+    {
+      "name": "Fake Amazon Page",
+      "pattern": "/amazon/login",
+      "description": "Fake Amazon login page"
+    },
+    {
+      "name": "Fake Google Page",
+      "pattern": "/google/login",
+      "description": "Fake Google login page"
+    },
+    {
+      "name": "Fake Microsoft Page",
+      "pattern": "/microsoft/login",
+      "description": "Fake Microsoft login page"
+    },
+    {
+      "name": "Fake Apple Page",
+      "pattern": "/apple/login",
+      "description": "Fake Apple login page"
+    },
+    {
+      "name": "Fake Facebook Page",
+      "pattern": "/facebook/login",
+      "description": "Fake Facebook login page"
+    },
+    {
+      "name": "Fake Instagram Page",
+      "pattern": "/instagram/login",
+      "description": "Fake Instagram login page"
+    },
+    {
+      "name": "Fake Twitter Page",
+      "pattern": "/twitter/login",
+      "description": "Fake Twitter login page"
+    },
+    {
+      "name": "Fake LinkedIn Page",
+      "pattern": "/linkedin/login",
+      "description": "Fake LinkedIn login page"
+    },
+    {
+      "name": "Fake Yahoo Page",
+      "pattern": "/yahoo/login",
+      "description": "Fake Yahoo login page"
+    },
+    {
+      "name": "Fake Netflix Page",
+      "pattern": "/netflix/login",
+      "description": "Fake Netflix login page"
+    },
+    {
+      "name": "Fake eBay Page",
+      "pattern": "/ebay/login",
+      "description": "Fake eBay login page"
+    },
+    {
+      "name": "Fake Chase Page",
+      "pattern": "/chase/login",
+      "description": "Fake Chase login page"
+    },
+    {
+      "name": "Fake Wells Fargo Page",
+      "pattern": "/wellsfargo/login",
+      "description": "Fake Wells

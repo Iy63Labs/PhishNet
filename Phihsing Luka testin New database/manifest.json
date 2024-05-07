@@ -6,6 +6,7 @@
   "permissions": ["tabs", "webRequest", "webNavigation"],
   "action": {
     "default_popup": "popup.html",
+    "default_icon": "images/icon.png",
     "default_title": "PhishNet"
   },
   "content_scripts": [
@@ -14,9 +15,6 @@
       "js": ["content.js"]
     }
   ],
-  "background": {
-    "service_worker": "background.js"
-  },
   "web_accessible_resources": [
     {
       "resources": ["phishing_database.json"],
