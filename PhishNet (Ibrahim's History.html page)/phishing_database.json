@@ -1,7 +1,6 @@
 {
   "phishingKeywords": ["phish", "trycloudflare", "login", "secure", "verify", "account", "update", "admin", "support"],
   "phishingUrls": ["example.com/phishing"],
-  "phishingUrls": ["http://news.fangsforum.com/view/613d383671436065c8febf8cebc99ef2/public/index.php/"],
   "phishingPatterns": [
     {
       "name": "Fake Login Page",
