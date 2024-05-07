@@ -1,0 +1,41 @@
+{
+  "phishingKeywords": ["phish", "trycloudflare", "login", "secure", "verify", "account", "update", "admin", "support"],
+  "phishingUrls": ["example.com/phishing"],
+  "phishingPatterns": [
+    {
+      "name": "Fake Login Page",
+      "pattern": "/login.php",
+      "description": "Common path for phishing login pages"
+    },
+    {
+      "name": "Account Verification",
+      "pattern": "/verify",
+      "description": "Common path for phishing account verification pages"
+    },
+    {
+      "name": "Suspicious Subdomain",
+      "pattern": "//suspicious.example.com/",
+      "description": "Subdomain commonly used for phishing"
+    },
+    {
+      "name": "Misleading Path",
+      "pattern": "/update/account",
+      "description": "Misleading path for phishing updates"
+    },
+    {
+      "name": "Fake Support Page",
+      "pattern": "/support/",
+      "description": "Common path for fake support pages"
+    },
+    {
+      "name": "Phishing Parameter",
+      "pattern": "phishing=1",
+      "description": "Parameter indicating phishing in the URL"
+    },
+    {
+      "name": "Malicious JavaScript",
+      "pattern": "malicious.js",
+      "description": "Malicious JavaScript file often used in phishing"
+    }
+  ]
+}
