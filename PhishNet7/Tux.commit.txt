@@ -1,0 +1,139 @@
+iy63@tux1:~/ci-102-lab-64-group-18$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+iy63@tux1:~/ci-102-lab-64-group-18$ ls
+ background.js     BioIbrahimYansaneh.txt   manifest.json   phishpop.html  'Phshing-luka main'   README.md
+ bio-Brandon.txt   bioLukaGorozia.txt       Phishing2       Phshing         popup.html           Testing
+iy63@tux1:~/ci-102-lab-64-group-18$ git pull
+Username for 'https://gitlab.cci.drexel.edu': iy63
+Password for 'https://iy63@gitlab.cci.drexel.edu':
+remote: Enumerating objects: 66, done.
+remote: Counting objects: 100% (57/57), done.
+remote: Compressing objects: 100% (39/39), done.
+remote: Total 39 (delta 21), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (39/39), 8.53 KiB | 72.00 KiB/s, done.
+From https://gitlab.cci.drexel.edu/fds24/ci10x-student-teams/64/18/ci-102-lab-64-group-18
+   de7dc7f..af29ff6  main       -> origin/main
+Updating de7dc7f..af29ff6
+Fast-forward
+ .DS_Store                                                | Bin 8196 -> 8196 bytes
+ Phihsing Luka testin AI API GMAIL/background.js          |  37 ++++++++++++++++++++++
+ Phihsing Luka testin AI API GMAIL/content.js             |  53 +++++++++++++++++++++++++++++++
+ Phihsing Luka testin AI API GMAIL/manifest.json          |  26 +++++++++++++++
+ Phihsing Luka testin AI API GMAIL/phishing_database.json |  37 ++++++++++++++++++++++
+ Phihsing Luka testin AI API GMAIL/popup.css              |  32 +++++++++++++++++++
+ Phihsing Luka testin AI API GMAIL/popup.html             |  17 ++++++++++
+ Phihsing Luka testin AI API GMAIL/popup.js               |  28 +++++++++++++++++
+ Phshing-luka main/manifest.json                          |   2 +-
+ Phshing-luka main/popup.js                               |   4 +++
+ Phshing/.DS_Store                                        | Bin 0 -> 6148 bytes
+ Phshing/content.js                                       |  26 +++++++--------
+ Phshing/popup.html                                       |   1 +
+ Phshing/url.js                                           |  54 ++++++++++++++++++++++++++++++++
+ Testing Phishnet 4/background.js                         |  23 ++++++++++++++
+ Testing Phishnet 4/content.js                            |  94 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Testing Phishnet 4/history.css                           |  34 ++++++++++++++++++++
+ Testing Phishnet 4/history.html                          |  59 ++++++++++++++++++++++++++++++++++
+ Testing Phishnet 4/history.js                            |   8 +++++
+ Testing Phishnet 4/images/background.jpg                 | Bin 0 -> 48148 bytes
+ Testing Phishnet 4/images/background1.jpg                | Bin 0 -> 65950 bytes
+ Testing Phishnet 4/images/icon.png                       | Bin 0 -> 25376 bytes
+ Testing Phishnet 4/images/logo.png                       | Bin 0 -> 349451 bytes
+ Testing Phishnet 4/images/logo1.png                      | Bin 0 -> 98402 bytes
+ Testing Phishnet 4/manifest.json                         |  27 ++++++++++++++++
+ Testing Phishnet 4/phishing_database.json                |  42 +++++++++++++++++++++++++
+ Testing Phishnet 4/popup.css                             |  33 +++++++++++++++++++
+ Testing Phishnet 4/popup.html                            |  92 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Testing Phishnet 4/popup.js                              |  38 ++++++++++++++++++++++
+ 29 files changed, 753 insertions(+), 14 deletions(-)
+ create mode 100644 Phihsing Luka testin AI API GMAIL/background.js
+ create mode 100644 Phihsing Luka testin AI API GMAIL/content.js
+ create mode 100644 Phihsing Luka testin AI API GMAIL/manifest.json
+ create mode 100644 Phihsing Luka testin AI API GMAIL/phishing_database.json
+ create mode 100644 Phihsing Luka testin AI API GMAIL/popup.css
+ create mode 100644 Phihsing Luka testin AI API GMAIL/popup.html
+ create mode 100644 Phihsing Luka testin AI API GMAIL/popup.js
+ create mode 100644 Phshing/.DS_Store
+ create mode 100644 Phshing/url.js
+ create mode 100644 Testing Phishnet 4/background.js
+ create mode 100644 Testing Phishnet 4/content.js
+ create mode 100644 Testing Phishnet 4/history.css
+ create mode 100644 Testing Phishnet 4/history.html
+ create mode 100644 Testing Phishnet 4/history.js
+ create mode 100644 Testing Phishnet 4/images/background.jpg
+ create mode 100644 Testing Phishnet 4/images/background1.jpg
+ create mode 100644 Testing Phishnet 4/images/icon.png
+ create mode 100644 Testing Phishnet 4/images/logo.png
+ create mode 100644 Testing Phishnet 4/images/logo1.png
+ create mode 100644 Testing Phishnet 4/manifest.json
+ create mode 100644 Testing Phishnet 4/phishing_database.json
+ create mode 100644 Testing Phishnet 4/popup.css
+ create mode 100644 Testing Phishnet 4/popup.html
+ create mode 100644 Testing Phishnet 4/popup.js
+iy63@tux1:~/ci-102-lab-64-group-18$ git statu
+git: 'statu' is not a git command. See 'git --help'.
+
+The most similar commands are
+        status
+        stage
+        stash
+iy63@tux1:~/ci-102-lab-64-group-18$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+iy63@tux1:~/ci-102-lab-64-group-18$ vi BioIbrahimYansaneh.txt
+background.js                      manifest.json                      popup.html
+bio-Brandon.txt                    Phihsing Luka testin AI API GMAIL/ README.md
+BioIbrahimYansaneh.txt             Phishing2/                         Testing/
+bioLukaGorozia.txt                 phishpop.html                      Testing Phishnet 4/
+.DS_Store                          Phshing/
+.git/                              Phshing-luka main/
+iy63@tux1:~/ci-102-lab-64-group-18$ vi BioIbrahimYansaneh.txt
+iy63@tux1:~/ci-102-lab-64-group-18$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   BioIbrahimYansaneh.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+iy63@tux1:~/ci-102-lab-64-group-18$ git  add BioIbrahimYansaneh.txt
+iy63@tux1:~/ci-102-lab-64-group-18$ git commit -m 'test push'
+[main acf5e46] test push
+ Committer: iy63 <iy63@tux1.cci.drexel.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+iy63@tux1:~/ci-102-lab-64-group-18$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+iy63@tux1:~/ci-102-lab-64-group-18$ git push
+Username for 'https://gitlab.cci.drexel.edu': iy63
+Password for 'https://iy63@gitlab.cci.drexel.edu':
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 32 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 286 bytes | 286.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+To https://gitlab.cci.drexel.edu/fds24/ci10x-student-teams/64/18/ci-102-lab-64-group-18.git
+   af29ff6..acf5e46  main -> main
+iy63@tux1:~/ci-102-lab-64-group-18$
