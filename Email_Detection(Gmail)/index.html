@@ -121,28 +121,35 @@
        * are found an appropriate message is printed.
        */
       async function listMessages() {
-  let response;
   try {
-    response = await gapi.client.gmail.users.messages.list({
+    const response = await gapi.client.gmail.users.messages.list({
       'userId': 'me',
       'maxResults': 5,
     });
+
+    const messages = response.result.messages;
+    if (!messages || messages.length === 0) {
+      document.getElementById('content').innerText = 'No messages found.';
+      return;
+    }
+
+    const output = await Promise.all(messages.map(async (message) => {
+      const messageResponse = await gapi.client.gmail.users.messages.get({
+        'userId': 'me',
+        'id': message.id,
+        'format': 'full', // Retrieve the full message payload
+      });
+
+      const headers = messageResponse.result.payload.headers;
+      const subject = headers ? getHeader(headers, 'Subject') : 'No subject';
+      return subject;
+    }));
+
+    document.getElementById('content').innerText = `Most Recent Messages:\n${output.join('\n')}`;
   } catch (err) {
     console.error('Gmail API error:', err);
     document.getElementById('content').innerText = err.message;
-    return;
   }
-  const messages = response.result.messages;
-  if (!messages || messages.length === 0) {
-    document.getElementById('content').innerText = 'No messages found.';
-    return;
-  }
-  const output = messages.reduce((str, message) => {
-    const headers = message.payload && message.payload.headers;
-    const subject = headers ? getHeader(headers, 'Subject') : 'No subject';
-    return `${str}${subject}\n`;
-  }, 'Most Recent Messages:\n');
-  document.getElementById('content').innerText = output;
 }
 
 function getHeader(headers, headerName) {
