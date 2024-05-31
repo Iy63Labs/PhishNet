@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "PhishNet",
+  "version": "1.0",
+  "description": "Phishing detection tool",
+  "permissions": ["tabs", "identity", "webRequest", "webNavigation"],
+  "oauth2": {
+    "client_id": "962622313603-p40qcerrefpkinjgjdk9b39qk36qv4hp.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/gmail.readonly"
+    ]
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/icon.png",
+    "default_title": "PhishNet"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["phishing_database.json"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var detectPhishingButton = document.getElementById('detectPhishing');
-  var resultDiv = document.getElementById('result');
+  const detectPhishingButton = document.getElementById('detectPhishing');
+  const resultDiv = document.getElementById('result');
 
-  // Call the button click function automatically
+  // Automatically call the button click function
   detectPhishingButtonClick();
 
   detectPhishingButton.addEventListener('click', detectPhishingButtonClick);
@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
       chrome.tabs.sendMessage(tabs[0].id, { type: 'detect-phishing' }, function(response) {
         if (chrome.runtime.lastError) {
           // Handle error
-          resultDiv.innerHTML = 'Error detecting phishing';
+          resultDiv.textContent = 'Error detecting phishing';
         } else {
-          resultDiv.innerHTML = response.result;
+          resultDiv.textContent = response.result;
         }
       });
     });
