@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhishNet</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
+  <style>
+    body {
+      width: 400px;
+      font-family: 'Raleway', sans-serif;
+      margin: 20px;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      color: #ffffff; /* White text color */
+      background-image: url('images/background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    h1, h2, p {
+      color: #ffffff; /* White text color */
+    }
+
+    button {
+      background-color: #00796b; /* Dark teal button color */
+      color: #ffffff; /* White text color */
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      font-weight: 700;
+      transition: background-color 0.3s ease; /* Smooth button hover transition */
+    }
+
+    button:hover {
+      background-color: #004d40; /* Darker teal on hover */
+    }
+
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #ff5252; /* Red text color for result */
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      width: 100px; /* Adjust the logo size as needed */
+      height: 100px;
+    }
+  </style>
+  <script src="popup.js"></script>
+</head>
+<body>
+  <div class="logo-container">
+    <img class="logo" src="images/logo1.png" alt="PhishNet Logo"> <!-- Replace with your first logo -->
+    <img class="logo" src="images/logo1.png" alt="Second Logo"> <!-- Replace with your second logo -->
+    <img class="logo" src="images/logo1.png" alt="Third Logo"> <!-- Replace with your third logo -->
+  </div>
+  
+  <h1>Welcome to PhishNet</h1>
+  <p>Stay safe online by detecting phishing websites. Click the button below to scan the current page for potential threats.</p>
+  <h2>PhishNet Detector</h2>
+  <button id="detectPhishing">Detect Phishing</button>
+  <button id="viewHistory">View History</button>
+  <div id="result"></div>
+</body>
+</html>
