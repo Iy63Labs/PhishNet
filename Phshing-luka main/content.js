@@ -1,4 +1,3 @@
-// content.js
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.type === 'detect-phishing') {
     // Fetch the local phishing database
