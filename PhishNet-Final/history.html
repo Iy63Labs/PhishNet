@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhishNet History</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
+  <style>
+    body {
+      width: 400px;
+      font-family: 'Raleway', sans-serif;
+      margin: 20px;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      color: #ffffff; /* White text color */
+      background-image: url('images/background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    h1, h2, p {
+      color: #ffffff; /* White text color */
+    }
+
+    button {
+      background-color: #00796b; /* Dark teal button color */
+      color: #ffffff; /* White text color */
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      font-weight: 700;
+      transition: background-color 0.3s ease; /* Smooth button hover transition */
+    }
+
+    button:hover {
+      background-color: #004d40; /* Darker teal on hover */
+    }
+
+    #historyList {
+      list-style-type: none; /* Remove bullet points */
+      padding: 0; /* Remove default padding */
+    }
+
+    #historyList li {
+      margin-bottom: 5px; /* Add some space between list items */
+    }
+  </style>
+</head>
+<body>
+  <h1>PhishNet History</h1>
+  
+  <!-- Button to navigate back to popup.html -->
+  <button id="goBack">Go Back to Popup</button>
+
+  <!-- List element to populate with history entries -->
+  <ul id="historyList"></ul>
+
+  <!-- Script tag to include JavaScript file for handling interactions -->
+  <script src="history.js"></script>
+</body>
+</html>
