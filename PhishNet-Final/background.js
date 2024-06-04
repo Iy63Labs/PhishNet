@@ -38,6 +38,11 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       sendResponse({ error: 'Error retrieving history data' });
     }
     return true; // Keep the message channel open
+  } else if (request.action === 'openAuthPage') {
+    chrome.tabs.create({ url: 'http://localhost:8000/index.html' });
+  } else if (request.action === 'sendSubjectToIndex') {
+    // Forward the subject to index.html
+    chrome.runtime.sendMessage({ action: 'updateEmailContent', subject: request.subject });
   }
 });
 

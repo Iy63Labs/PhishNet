@@ -3,7 +3,7 @@
   "name": "PhishNet",
   "version": "1.0",
   "description": "Phishing detection tool",
-  "permissions": ["tabs", "webRequest", "webNavigation", "storage"],
+  "permissions": ["tabs", "webRequest", "webNavigation", "storage", "http://localhost/*"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": "images/icon.png",

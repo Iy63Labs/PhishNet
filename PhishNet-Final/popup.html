@@ -114,6 +114,38 @@
       animation: buttonPress 0.1s ease-in-out;
       transform: scale(0.95);
     }
+    #authenticateButton { /* Add this button style */
+      width: 30%;
+      padding: 8px;
+      font-size: 14px;
+      background-color: #ADD8E6;
+      color: #fff;
+      border: 2px solid #00008B;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: transform 0.1s ease-in-out;
+      margin-top: 10px;
+    }
+    #authenticateButton:active {
+      animation: buttonPress 0.1s ease-in-out;
+      transform: scale(0.95);
+    }
+    #checkEmailButton { /* Add this button style */
+      width: 30%;
+      padding: 8px;
+      font-size: 14px;
+      background-color: #ADD8E6;
+      color: #fff;
+      border: 2px solid #00008B;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: transform 0.1s ease-in-out;
+      margin-top: 10px;
+    }
+    #checkEmailButton:active {
+      animation: buttonPress 0.1s ease-in-out;
+      transform: scale(0.95);
+    }
   </style>
   <script src="popup.js"></script>
 </head>
@@ -133,5 +165,7 @@
     <div id="customResult"></div>
   </div>
   <button id="viewHistory">View History</button>
+  <button id="authenticateButton">Authenticate</button>
+  <button id="checkEmailButton">Check Email</button> <!-- Add this button -->
 </body>
 </html>
