@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
           handleDetectionResult(document.getElementById('result'), response.result);
         });
       } else {
-        handleError(document.getElementById('result'));
+        handleError(document.getElemedntById('result'));
       }
     });
   }
 
   function handleDetectionResult(element, result) {
-    element.innerHTML = `Phishing detected: ${result}`;
+    element.innerHTML = ` ${result}`;
   }
 
   function handleError(element) {
@@ -80,34 +80,53 @@ document.addEventListener('DOMContentLoaded', function() {
            excessiveHyphensDetected || mixedScriptDetected || !urlParts.href.startsWith('https://');
   }
 
+  function detectPhishingForCustomUrl(url) {
+    if (!url) {
+      document.getElementById('customResult').innerHTML = 'Please enter a URL';
+      return;
+    }
+
+    fetch(chrome.runtime.getURL('phishing_database.json'))
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch the local phishing database');
+        }
+        return response.json();
+      })
+      .then(phishingDatabase => {
+        const databasePhishingDetected = isPhishing(url, phishingDatabase);
+        document.getElementById('customResult').innerHTML = databasePhishingDetected ? 'Phishing Detected!' : 'No Phishing Detected';
+      })
+      .catch(error => {
+        console.error('Error:', error.message);
+        document.getElementById('customResult').innerHTML = 'Error detecting phishing';
+      });
+  }
+
   function isPhishing(url, phishingDatabase) {
     const { phishingKeywords, phishingUrls, phishingPatterns } = phishingDatabase;
-    const keywordDetected = phishingKeywords.some(keyword => {
-      const regex = new RegExp(`\\b${keyword}\\b`, 'i');
-      return regex.test(url);
-    });
-
+  
+    const keywordDetected = phishingKeywords.some(keyword => url.toLowerCase().includes(keyword.toLowerCase()));
     if (keywordDetected) {
       console.log(`Keyword detected: ${url}`);
       return true;
     }
-
-    const urlDetected = phishingUrls.some(phishingUrl => url.includes(phishingUrl));
+  
+    const urlDetected = phishingUrls.some(phishingUrl => url.toLowerCase().includes(phishingUrl.toLowerCase()));
     if (urlDetected) {
       console.log(`URL detected: ${url}`);
       return true;
     }
-
+  
     const patternDetected = phishingPatterns.some(pattern => {
       const regex = new RegExp(pattern.pattern, 'i');
       return regex.test(url);
     });
-
     if (patternDetected) {
       console.log(`Pattern detected: ${url}`);
       return true;
     }
-
+  
     return false;
   }
 
