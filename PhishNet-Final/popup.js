@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const authenticateButton = document.getElementById('authenticateButton');
   const checkEmailButton = document.getElementById('checkEmailButton');
 
+  sendMessageToContentScript();
+
   function sendMessageToContentScript() {
     chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
       if (tabs.length > 0) {

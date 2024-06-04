@@ -59,18 +59,11 @@ function checkUrls(phishingDatabase) {
 // Function to check for patterns in the phishing database
 function checkPatterns(phishingDatabase) {
   return phishingDatabase.phishingPatterns.some(pattern => {
-    const regex = new RegExp(pattern.pattern);
+    const regex = new RegExp(pattern.pattern, 'i');
     return regex.test(window.location.href);
   });
 }
 
 // Function to record the time of phishing detection
 function recordDetection(dateTime) {
-  let detections = JSON.parse(localStorage.getItem('phishingDetections')) || [];
-  detections.push(dateTime);
-  localStorage.setItem('phishingDetections', JSON.stringify(detections));
-}
-
-function retrieveHistoryData() {
-  // Implement your logic to retrieve history data here
-}
+  let detections = JSON.parse(localStorage.getItem('phishingDetections'))
