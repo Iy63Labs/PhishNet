@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhishNet</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
+  <style>
+    @keyframes zoomOut {
+      from { transform: scale(1.1); }
+      to { transform: scale(1); }
+    }
+
+    @keyframes buttonPress {
+      from { transform: scale(1); }
+      to { transform: scale(0.95); }
+    }
+
+    body {
+      width: 400px;
+      font-family: 'Raleway', sans-serif;
+      margin: 0;
+      padding: 19px;
+      text-align: center;
+      color: #f00909;
+      background-image: url('images/background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 92.77vh;
+      animation: zoomOut 1s ease-in-out;
+    }
+    h1, h2, p {
+      color: #dae4dd;
+      margin: 0;
+      padding: 0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+    .content {
+      margin-top: -0px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    #result, #customResult {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+      color: #24f109af;
+    }
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    .logo {
+      width: 150px;
+      height: 150px;
+      margin: 0 10px;
+    }
+    .top-logo {
+      margin-top: 50px;
+    }
+    .search-container {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .search-container input {
+      width: 65%;
+      padding: 8px;
+      font-size: 14px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      border-color: #00008B;
+    }
+    .search-container button {
+      width: 30%;
+      padding: 8px;
+      font-size: 14px;
+      margin-left: 5px;
+      background-color: #ADD8E6;
+      color: #fff;
+      border: 2px solid #00008B;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: transform 0.1s ease-in-out;
+    }
+    .search-container button:active {
+      animation: buttonPress 0.1s ease-in-out;
+      transform: scale(0.95);
+    }
+    #viewHistory {
+      width: 30%;
+      padding: 8px;
+      font-size: 14px;
+      background-color: #ADD8E6;
+      color: #fff;
+      border: 2px solid #00008B;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: transform 0.1s ease-in-out;
+      margin-top: 10px;
+    }
+    #viewHistory:active {
+      animation: buttonPress 0.1s ease-in-out;
+      transform: scale(0.95);
+    }
+    #authenticateButton {
+      width: 30%;
+      padding: 8px;
+      font-size: 14px;
+      background-color: #ADD8E6;
+      color: #fff;
+      border: 2px solid #00008B;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: transform 0.1s ease-in-out;
+      margin-top: 10px;
+    }
+    #authenticateButton:active {
+      animation: buttonPress 0.1s ease-in-out;
+      transform: scale(0.95);
+    }
+    #checkEmailButton {
+      width: 30%;
+      padding: 8px;
+      font-size: 14px;
+      background-color: #ADD8E6;
+      color: #fff;
+      border: 2px solid #00008B;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: transform 0.1s ease-in-out;
+      margin-top: 10px;
+    }
+    #checkEmailButton:active {
+      animation: buttonPress 0.1s ease-in-out;
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+    <img class="logo top-logo" src="images/logo1.png" alt="PhishNet Logo">
+  </div>
+  <div class="content">
+    <h1>Welcome to PhishNet</h1>
+    <p>Stay safe online by detecting phishing websites.</p>
+    <h2>PhishNet Detector</h2>
+    <div id="result">Current page: </div>
+    <div class="search-container">
+      <input type="text" id="customUrl" placeholder="Paste a URL here">
+      <button id="detectCustomPhishing">Detect</button>
+    </div>
+    <div id="customResult"></div>
+  </div>
+  <button id="viewHistory">View History</button>
+  <button id="authenticateButton">Authenticate</button>
+  <button id="checkEmailButton">Check Email</button>
+  <script src="popup.js"></script>
+</body>
+</html>
